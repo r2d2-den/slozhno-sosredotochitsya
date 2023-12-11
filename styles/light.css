@@ -3,10 +3,51 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme_light {
+  --accent-color: #ff8dcb;
+  --bg-color: #ffeef6;
+  --text-color: #353430;
+  --title-color: #ffc2e6;
+  --accent-title-color: #353430;
+  --section-title-color: #353430;
+  --title-text-shadow: #ff8dcb;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --bg-color: #ffeef6;
+    --text-color: #353430;
+    --title-color: #ffc2e6;
+    --accent-title-color: #353430;
+    --section-title-color: #353430;
+    --title-text-shadow: #ff8dcb;
+  }
+
+  .page {
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .decorated-element {
+    display: none;
+  }
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: #ff8dcb;
+  --bg-color: #ffeef6;
+  --text-color: #353430;
+  --title-color: #ffc2e6;
+  --accent-title-color: #353430;
+  --section-title-color: #353430;
+  --title-text-shadow: #ff8dcb;
+  background-image: url(../images/cover-image-light.png);
+}
+
+.theme_light .decorated-element {
+  display: none;
 }
