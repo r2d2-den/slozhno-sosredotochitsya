@@ -11,5 +11,8 @@
   --title-text-shadow: #ff0070;
   --accent-title-color: #000028;
   --section-title-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.5);
+  --font-size-mobille: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-desctop:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   --font-page: "IBM Plex Mono";
 }

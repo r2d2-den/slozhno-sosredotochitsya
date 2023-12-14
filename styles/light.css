@@ -1,8 +1,4 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+
 :root.theme_light {
   --accent-color: #ff8dcb;
   --bg-color: #ffeef6;
@@ -11,6 +7,7 @@
   --accent-title-color: #353430;
   --section-title-color: #353430;
   --title-text-shadow: #ff8dcb;
+  --hover-color: rgba(53, 52, 48, 0.5);
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,6 +19,7 @@
     --accent-title-color: #353430;
     --section-title-color: #353430;
     --title-text-shadow: #ff8dcb;
+    --hover-color: rgba(53, 52, 48, 0.5);
   }
 
   .page {
@@ -45,9 +43,10 @@
   --accent-title-color: #353430;
   --section-title-color: #353430;
   --title-text-shadow: #ff8dcb;
+  --hover-color: rgba(53, 52, 48, 0.5);
   background-image: url(../images/cover-image-light.png);
 }
 
 .theme_light .decorated-element {
-  display: none;
+  display: none; 
 }

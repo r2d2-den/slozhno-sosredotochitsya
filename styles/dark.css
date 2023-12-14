@@ -1,8 +1,4 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+
 :root.theme_dark {
   --bg-color: #000028;
   --text-color: #f1b2ce;
@@ -11,6 +7,7 @@
   --title-text-shadow: #ff0070;
   --accent-title-color: #000028;
   --section-title-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +19,7 @@
     --title-text-shadow: #ff0070;
     --accent-title-color: #000028;
     --section-title-color: #ff0070;
+    --hover-color: rgba(255, 0, 112, 0.5);
   }
 
   .page {
@@ -37,48 +35,12 @@
   --title-text-shadow: #ff0070;
   --accent-title-color: #000028;
   --section-title-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.5);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
   background-image: url(../images/cover-image-dark.png);
-}
-
-.decorated-element {
-  position: absolute;
-  top: 10px;
-  right: 38px;
-  color: var(--accent-color);
-  font-family: inherit;
-  line-height: 25px;
-}
-
-.decorated-element::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 3px 1px var(--accent-color);
-  background-color: var(--accent-color);
-  filter: drop-shadow(0px 0px 4px var(--accent-color));
-}
-
-.decorated-element::after {
-  content: "REC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: var(--accent-color);
-}
-
-@container (768px <= inline-size <= 1440px) {
-  .decorated-element {
-    top: 20px;
-    right: 48px;
-  }
 }
 
 .theme_dark .decorated-element {
